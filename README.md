@@ -1,6 +1,7 @@
 
 ## Manejo de Proyectos
 
+[![Build Status](https://travis-ci.com/uqbar-project/eg-manejo-proyectos-kotlin.svg?branch=main)](https://travis-ci.com/uqbar-project/eg-manejo-proyectos-kotlin) [![coverage](https://codecov.io/gh/uqbar-project/eg-manejo-proyectos-kotlin/branch/master/graph/badge.svg)](https://codecov.io/gh/uqbar-project/eg-manejo-proyectos-kotlin/branch/master/graph/badge.svg) [![BCH compliance](https://bettercodehub.com/edge/badge/uqbar-project/eg-manejo-proyectos-kotlin?branch=master)](https://bettercodehub.com/) 
 
 Este ejercicio sirve como excusa para contar el proceso del diseño.
 
