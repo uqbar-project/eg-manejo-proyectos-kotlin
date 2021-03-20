@@ -31,6 +31,8 @@ abstract class Tarea(var tiempo: Int) {
     }
 
     abstract fun porcentajeCompletitud(): Int
+
+    fun diasMaximoAtraso() = complejidad.diasMaximoAtraso(this)
 }
 
 class TareaSimple(tiempo: Int) : Tarea(tiempo) {
@@ -52,7 +54,7 @@ class TareaCompuesta(tiempo: Int) : Tarea(tiempo) {
 
     override fun porcentajeCompletitud() = this.subtareas.sumBy { it.porcentajeCompletitud() } / this.subtareas.size
 
-    override fun costoPorOverhead() = this.costoComplejidad() * (if (tieneMuchasSubtareas()) 1.03 else 1.0)
+    override fun costoPorOverhead() = this.costoComplejidad() * (if (tieneMuchasSubtareas()) 0.03 else 0.0)
 
     fun tieneMuchasSubtareas() = this.subtareas.size > 3
 
@@ -63,14 +65,17 @@ class TareaCompuesta(tiempo: Int) : Tarea(tiempo) {
 
 open class ComplejidadMinima {
     open fun costo(tarea: Tarea) = tarea.tiempo * 25.0
+    open fun diasMaximoAtraso(tarea: Tarea) = 5.0
 }
 
 class ComplejidadMedia : ComplejidadMinima() {
     override fun costo(tarea: Tarea) = 1.05 * super.costo(tarea)
+    override fun diasMaximoAtraso(tarea: Tarea) = tarea.tiempo * 0.1
 }
 
 class ComplejidadMaxima : ComplejidadMinima() {
     override fun costo(tarea: Tarea): Double = (1.07 * super.costo(tarea)) + this.costoExtra(tarea.tiempo)
 
     fun costoExtra(tiempo: Int) = Math.max(0, tiempo - 10) * 10
+    override fun diasMaximoAtraso(tarea: Tarea) = tarea.tiempo * 0.2 + 8
 }

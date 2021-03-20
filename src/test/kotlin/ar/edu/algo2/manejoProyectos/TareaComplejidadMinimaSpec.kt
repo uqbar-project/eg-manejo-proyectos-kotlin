@@ -12,6 +12,9 @@ class TareaComplejidadMinimaSpec : DescribeSpec({
         it("tiene el costo del cálculo base") {
             tarea.costo() shouldBe 250
         }
+        it("tiene un valor fijo para calcular los días máximos de atraso") {
+            tarea.diasMaximoAtraso() shouldBe 5
+        }
     }
 
 })
