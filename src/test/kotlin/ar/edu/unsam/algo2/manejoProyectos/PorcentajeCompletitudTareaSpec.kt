@@ -1,6 +1,6 @@
-package ar.edu.algo2.manejoProyectos
+package ar.edu.unsam.algo2.manejoProyectos
 
-import ar.edu.algo2.manejoProyectos.exceptions.BusinessException
+import ar.edu.unsam.algo2.manejoProyectos.exceptions.BusinessException
 import io.kotest.core.spec.IsolationMode
 import io.kotest.core.spec.style.DescribeSpec
 import io.kotest.matchers.shouldBe

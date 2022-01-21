@@ -1,4 +1,4 @@
-package ar.edu.algo2.manejoProyectos
+package ar.edu.unsam.algo2.manejoProyectos
 
 import io.kotest.core.spec.IsolationMode
 import io.kotest.core.spec.style.DescribeSpec

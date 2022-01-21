@@ -1,6 +1,6 @@
-package ar.edu.algo2.manejoProyectos
+package ar.edu.unsam.algo2.manejoProyectos
 
-import ar.edu.algo2.manejoProyectos.exceptions.BusinessException
+import ar.edu.unsam.algo2.manejoProyectos.exceptions.BusinessException
 
 abstract class Tarea(var tiempo: Int) {
     var complejidad = ComplejidadMinima()
@@ -12,7 +12,7 @@ abstract class Tarea(var tiempo: Int) {
 
     fun costoComplejidad() = complejidad.costo(this)
 
-    fun costoImpositivo() = impuestos.sumByDouble { it.costoImpositivo(this) }
+    fun costoImpositivo() = impuestos.sumOf { it.costoImpositivo(this) }
 
     fun complejidadMedia() {
         complejidad = ComplejidadMedia()
@@ -52,7 +52,7 @@ class TareaSimple(tiempo: Int) : Tarea(tiempo) {
 class TareaCompuesta(tiempo: Int) : Tarea(tiempo) {
     var subtareas: MutableList<Tarea> = mutableListOf()
 
-    override fun porcentajeCompletitud() = this.subtareas.sumBy { it.porcentajeCompletitud() } / this.subtareas.size
+    override fun porcentajeCompletitud() = this.subtareas.sumOf { it.porcentajeCompletitud() } / this.subtareas.size
 
     override fun costoPorOverhead() = this.costoComplejidad() * (if (tieneMuchasSubtareas()) 0.03 else 0.0)
 
