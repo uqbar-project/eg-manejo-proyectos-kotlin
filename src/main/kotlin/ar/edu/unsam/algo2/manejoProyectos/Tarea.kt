@@ -54,7 +54,7 @@ class TareaCompuesta(tiempo: Int) : Tarea(tiempo) {
 
     override fun porcentajeCompletitud() = this.subtareas.sumOf { it.porcentajeCompletitud() } / this.subtareas.size
 
-    override fun costoPorOverhead() = this.costoComplejidad() * (if (tieneMuchasSubtareas()) 0.03 else 0.0)
+    override fun costoPorOverhead() = this.costoComplejidad() * (if (tieneMuchasSubtareas()) 0.04 else 0.0)
 
     fun tieneMuchasSubtareas() = this.subtareas.size > 3
 

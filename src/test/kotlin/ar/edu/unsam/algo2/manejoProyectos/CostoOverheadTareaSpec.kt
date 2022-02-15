@@ -25,7 +25,7 @@ class CostoOverheadTareaSpec:DescribeSpec({
         }
         it("si pasa a tener muchas subtareas tiene costo por overhead") {
             tarea.agregarSubtarea(TareaSimple(40))
-            tarea.costoPorOverhead() shouldBe 7.5
+            tarea.costoPorOverhead() shouldBe 10.0
         }
     }
 })
