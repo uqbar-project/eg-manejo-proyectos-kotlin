@@ -1,7 +1,7 @@
 
 ## Manejo de Proyectos
 
-[![build](https://github.com/uqbar-project/eg-manejo-proyectos-kotlin/actions/workflows/build.yml/badge.svg)](https://github.com/uqbar-project/eg-manejo-proyectos-kotlin/actions/workflows/build.yml) [![coverage](https://codecov.io/gh/uqbar-project/eg-manejo-proyectos-kotlin/branch/master/graph/badge.svg)](https://codecov.io/gh/uqbar-project/eg-manejo-proyectos-kotlin/branch/master/graph/badge.svg) [![BCH compliance](https://bettercodehub.com/edge/badge/uqbar-project/eg-manejo-proyectos-kotlin?branch=master)](https://bettercodehub.com/) 
+[![build](https://github.com/uqbar-project/eg-manejo-proyectos-kotlin/actions/workflows/build.yml/badge.svg)](https://github.com/uqbar-project/eg-manejo-proyectos-kotlin/actions/workflows/build.yml) [![coverage](https://codecov.io/gh/uqbar-project/eg-manejo-proyectos-kotlin/branch/master/graph/badge.svg)](https://codecov.io/gh/uqbar-project/eg-manejo-proyectos-kotlin/branch/master/graph/badge.svg) 
 
 Este ejercicio sirve como excusa para contar el proceso del diseño.
 
