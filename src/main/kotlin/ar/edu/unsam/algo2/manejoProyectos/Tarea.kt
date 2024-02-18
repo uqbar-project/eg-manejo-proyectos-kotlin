@@ -4,7 +4,7 @@ import ar.edu.unsam.algo2.manejoProyectos.exceptions.BusinessException
 
 abstract class Tarea(var tiempo: Int) {
     var complejidad = ComplejidadMinima()
-    val impuestos: MutableList<Impuesto> = mutableListOf()
+    val impuestos = mutableListOf<Impuesto>()
 
     fun costo() = costoComplejidad() + costoImpositivo() + costoPorOverhead()
 
